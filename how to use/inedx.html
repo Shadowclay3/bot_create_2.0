@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - Auto Animate</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="reveal_slides/dist/reveal.css">
+		<link rel="stylesheet" href="reveal_slides/dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="reveal_slides/plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+
+
+        <!--
+           
+          #1
+         
+        -->
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>2.0</h3>
+					<p>Bot creator</p>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" style="height: 100px;">
+					<p>Instruction:</p>
+					<h3 style="opacity: 0.2; font-size: 18px;">t.me/marklanselot</h3>
+				</section>
+        
+
+
+
+        <!--
+           
+          #2
+         
+        -->
+				<section>
+					<section data-auto-animate>
+						<img src="https://cdn1.telegram-cdn.org/file/WqSM6vI8fid-EOQoEEv6RrnQW8wxGHPPB1nGfqr4LQVpe1iwyKK7EnydOn7KcJZt8R08ghQXboAWiuBmHkKxkFshDMLslHkLDybrfFH7d5C5frbiYhxlSDrls6HocdeZ5TCeZemcF6bQukgt8wz2Lv0FgqOf5LbH-KCn8LbUSybSqPR4waQ8QCUWt3DPMo9zQChJxwOZGLshMMbk_X4k8n0igy4x26zmgaRSwh7t0eqs302o2n_mTkKEAzWQ2-nGPVqLNDsGpaqIe4DQfj37G7xxlTwirzGub2eoevbCPgPEXATdOKNGbd5jLDeNx3C0VQanmXhLyzocMTQ2W0zlrA.jpg" style="height: 100px; border-radius: 20px;">
+						<p>Getting a token:</p>
+						<p>url: <a href="https://t.me/BotFather">to bot</a></p>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim style="font-size: 14px;">
+							you: /newbot
+							
+							bot: Alright, a new bot. How are we going to call it? 
+									 Please choose a name for your bot.
+							
+							you: random_name
+			  
+							bot: Good. Now let`s choose a username for your bot. It must end in bot. 
+							     Like this, for example: TetrisBot or tetris_bot.
+
+							you: random_name_this_my_bot
+
+							bot: 6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk
+
+
+
+						  </code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<img src="json logo.png" style="height: 100px; border-radius: 15px;">
+						<p>creating "config.json" file:</p>
+						<p>run the script:</p>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+							> config.json is generated
+							  Enter your token 
+						</code></pre>
+						<p>write it to a file:</p>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+							{
+								"bot": {
+									"token": "6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk"
+								}
+							}
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<p>if you did everything right then you will have this:</p>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+							> Successful launch! | [07:55:33]
+							ㅤ
+						</code></pre>
+					</section>
+
+				</section>
+
+        <!--
+           
+          #3
+         
+        -->
+				<section>
+					<section data-auto-animate>
+						<img src="https://icons.veryicon.com/png/o/system/inspur-cloud-icon/api-key.png" style="height: 200px; border-radius: 20px;">
+						<p>Do not give this token to anyone else!</p>
+						<pre data-id="code"><code data-line-numbers class="hljs" data-trim style="font-size: 14px;">
+							{
+								"bot": {
+									"token": "6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk"
+								}
+							}
+						  </code></pre>
+					</section>
+					<section data-auto-animate>
+						<img src="https://cdn.icon-icons.com/icons2/2073/PNG/512/chat_chatting_twitter_icon_127127.png" style="height: 150px; border-radius: 15px;">
+						<p>command response:</p>
+						<pre data-id="code"><code  data-line-numbers class="hljs" data-trim style="font-size: 14px;">
+							{
+								"bot": {
+									"token": "6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk"
+								},
+							
+								"command":{
+									"/start": [
+										{
+											"text": "Ты прислал команду /start", 
+											"buttons":[ 
+												{
+													"name": "удалить сообщение", 
+													"type": "callback", 
+													"calldata": "удаление сообщения вначале"
+												}
+											]
+								}
+							]}
+							}
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<p>for callback to do something, you need to create a parameter:</p>
+						<pre data-id="code"><code  data-line-numbers class="hljs" data-trim style="font-size: 14px;">
+							{
+								"bot": {
+									"token": "6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk"
+								},
+							
+								"command":{
+									"/start": [
+										{
+											"text": "Ты прислал команду /start", 
+											"buttons":[ 
+												{
+													"name": "удалить сообщение", 
+													"type": "callback", 
+													"calldata": "удаление сообщения вначале"
+												}
+											]
+										}
+									]
+								},
+							
+								"callback":{
+									"удаление сообщения вначале":[
+										{"delete": "message_id +0"},
+										{"time.sleep": 1},
+										{"text": "Сообщение удалено"}
+									]
+								}
+							
+							}
+						</code></pre>
+					</section>
+				</section>
+
+
+				<section>
+					<p>What can be sent:</p>
+					<pre data-id="code"><code data-line-numbers class="hljs" data-trim style="font-size: 14px;">
+						example:
+						{
+							"bot": {
+								"token": "6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk"
+							},
+						
+							"command":{
+								"/start": [
+									{
+										"photo": "https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/11/photo-metadata-2.jpg"
+									},
+						
+									{
+										"file": "https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/11/photo-metadata-2.jpg",
+										"caption": "так можна відправити в хорошій якості"
+									},
+						
+									{
+										"video": "123.mp4",
+										"caption":"Заціни це відео)",
+										"buttons":[ 
+											{
+												"name": "удалить сообщение", 
+												"type": "callback", 
+												"calldata": "удаление сообщения вначале"
+											}
+										]
+									},
+									
+									{
+										"text": "Ты прислал команду /start",
+										"buttons":[ 
+											{
+												"name": "удалить сообщение", 
+												"type": "callback", 
+												"calldata": "удаление сообщения вначале"
+											}
+										]
+									}
+								]
+							},
+						
+							"callback":{
+								"удаление сообщения вначале":[
+									{"delete": "message_id +0"},
+									{"time.sleep": 1},
+									{"text": "Сообщение удалено"}
+								]
+							}
+						
+						}
+					  </code></pre>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="reveal_slides/dist/reveal.js"></script>
+		<script src="reveal_slides/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>
