@@ -1,0 +1,50 @@
+{
+    "bot": {
+        "token": "6566957514:AAFQOM7_msn9dLuHT87nU-Yp6oI3oRlSOCk"
+    },
+
+    "command":{
+        "/start": [
+            {
+                "photo": "https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/11/photo-metadata-2.jpg"
+            },
+
+            {
+                "file": "https://d27jswm5an3efw.cloudfront.net/app/uploads/2019/11/photo-metadata-2.jpg",
+                "caption": "так можна відправити в хорошій якості"
+            },
+
+            {
+                "video": "123.mp4",
+                "caption":"Заціни це відео)",
+                "buttons":[ 
+                    {
+                        "name": "удалить сообщение", 
+                        "type": "callback", 
+                        "calldata": "удаление сообщения вначале"
+                    }
+                ]
+            },
+            
+            {
+                "text": "Ты прислал команду /start",
+                "buttons":[ 
+                    {
+                        "name": "удалить сообщение", 
+                        "type": "callback", 
+                        "calldata": "удаление сообщения вначале"
+                    }
+                ]
+            }
+        ]
+    },
+
+    "callback":{
+        "удаление сообщения вначале":[
+            {"delete": "message_id +0"},
+            {"time.sleep": 1},
+            {"text": "Сообщение удалено"}
+        ]
+    }
+
+}
